@@ -1,11 +1,11 @@
-export function Age(birthDate) {
+export function Age(birthDate, healthValue, intelligenceValue) {
   this.birthDate = birthDate;
   this.earthAge = this.getEarthAge();
   this.mercuryAge = this.getMercuryAge();
   this.venusAge = this.getVenusAge();
   this.marsAge = this.getMarsAge();
   this.jupiterAge = this.getJupiterAge();
-  this.lifeExpectancy = this.getLifeExpectancy();
+  this.lifeExpectancy = this.getLifeExpectancy(healthValue, intelligenceValue);
 }
 
 Age.prototype.getEarthAge = function () {
@@ -36,8 +36,14 @@ Age.prototype.getJupiterAge = function () {
   return Math.floor(jupiterAge);
 };
 
-Age.prototype.getLifeExpectancy = function () {
+Age.prototype.getLifeExpectancy = function (input1, input2) {
   let lifeExpectancy;
-
+  if (input1 + input2 > 0) {
+    lifeExpectancy = 105;
+  } else if (input1 + input2 === 0) {
+    lifeExpectancy = 80;
+  } else if (input1 + input2 < 0) {
+    lifeExpectancy = 19;
+  }
   return lifeExpectancy;
 };
