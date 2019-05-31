@@ -1,44 +1,52 @@
 import { Age } from './../src/age-calc.js';
 
 describe('Age', function() {
+  let reusableAge;
+  let reusableBirthDate;
 
-  it('it should find age in Earth years based on inputted birth date', function() {
+  // beforeEach(function( {
+  //   reusableBirthDate = new Date(1990, 11, 13);
+  //   reusableAge = new Age(reusableBirthDate);
+  // }));
 
-    expect().toEqual();
+  it('should find age in Earth years based on inputted birth date', function() {
+
+    expect(reusableAge.earthAge).toEqual(28);
   });
 
-  it('it should find age in Mercury years based on inputted birth date', function() {
+  it('should find age in Mercury years based on inputted birth date', function() {
 
-    expect().toEqual();
+    expect(reusableAge.mercuryAge).toEqual(118);
   });
 
-  it('it should find age in Venus years based on inputted birth date', function() {
+  it('should find age in Venus years based on inputted birth date', function() {
 
-    expect().toEqual();
+    expect(reusableAge.venusAge).toEqual(46);
   });
 
-  it('it should find age in Mars years based on inputted birth date', function() {
+  it('should find age in Mars years based on inputted birth date', function() {
 
-    expect().toEqual();
+    expect(reusableAge.marsAge).toEqual(15);
   });
 
-  it('it should find age in Jupiter years based on inputted birth date', function() {
+  it('should find age in Jupiter years based on inputted birth date', function() {
 
-    expect().toEqual();
+    expect(reusableAge.jupiterAge).toEqual(2);
   });
 
-  it('it should determine user\'s life expectancy', function() {
+  it('should determine user\'s life expectancy', function() {
 
-    expect().toEqual();
+    expect(reusableAge.lifeExpectancy).toEqual(undefined);
   });
 
-  it('it should determine user\'s years left to live based on life expectancy', function() {
+  it('should determine user\'s years left to live based on life expectancy', function() {
 
-    expect().toEqual();
+    expect(reusableAge.lifeExpectancy - reusableAge.earthAge).toEqual(undefined);
   });
 
-  it('it should determine user\'s years lived over life expectancy if their age is higher than expectancy', function() {
-
-    expect().toEqual();
+  it('should determine user\'s years lived over life expectancy if their age is higher than expectancy', function() {
+    // let birthDate = new Date(1900, 00, 01);
+    // let age = new Age(birthDate);
+    expect(reusableAge.lifeExpectancy - reusableAge.earthAge).toEqual(undefined);
   });
 });
