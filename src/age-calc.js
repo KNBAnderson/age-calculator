@@ -45,5 +45,6 @@ Age.prototype.getLifeExpectancy = function (input1, input2) {
   } else if (input1 + input2 < 0) {
     lifeExpectancy = 19;
   }
+  console.log(lifeExpectancy);
   return lifeExpectancy;
 };

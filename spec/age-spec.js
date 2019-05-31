@@ -41,6 +41,6 @@ describe('Age', function() {
 
   it('should determine user\'s years lived over life expectancy if their age is higher than expectancy', function() {
     let age = new Age(new Date(1900, 0, 1), 0, -1);
-    expect(age.lifeExpectancy - age.earthAge).toEqual(100);
+    expect(age.earthAge - age.lifeExpectancy).toEqual(100);
   });
 });
