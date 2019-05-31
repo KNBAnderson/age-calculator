@@ -1,13 +1,8 @@
-import { Age } from './../src/age-calc.js';
+import { Age } from './../src/age-calc';
 
 describe('Age', function() {
-  let reusableAge;
-  let reusableBirthDate;
+  let reusableAge = new Age(new Date(1990, 11, 13));
 
-  // beforeEach(function( {
-  //   reusableBirthDate = new Date(1990, 11, 13);
-  //   reusableAge = new Age(reusableBirthDate);
-  // }));
 
   it('should find age in Earth years based on inputted birth date', function() {
 
