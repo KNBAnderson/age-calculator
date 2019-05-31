@@ -16,7 +16,7 @@ describe('Age', function() {
 
   it('should find age in Venus years based on inputted birth date', function() {
 
-    expect(reusableAge.venusAge).toEqual(46);
+    expect(reusableAge.venusAge).toEqual(45);
   });
 
   it('should find age in Mars years based on inputted birth date', function() {
