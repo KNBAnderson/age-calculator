@@ -27,14 +27,13 @@ Age.prototype.getVenusAge = function () {
 };
 
 Age.prototype.getMarsAge = function () {
-  let marsAge = this.exactAge/1.88;
+  let marsAge = this.exactAge / 1.88;
   return Math.floor(marsAge);
 };
 
 Age.prototype.getJupiterAge = function () {
-  let jupiterAge;
-
-  return jupiterAge;
+  let jupiterAge = this.exactAge / 11.86;
+  return Math.floor(jupiterAge);
 };
 
 Age.prototype.getLifeExpectancy = function () {

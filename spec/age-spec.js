@@ -40,8 +40,7 @@ describe('Age', function() {
   });
 
   it('should determine user\'s years lived over life expectancy if their age is higher than expectancy', function() {
-    // let birthDate = new Date(1900, 00, 01);
-    // let age = new Age(birthDate);
-    expect(reusableAge.lifeExpectancy - reusableAge.earthAge).toEqual(undefined);
+    let age = new Age(new Date(1900, 00, 01));
+    expect(age.lifeExpectancy - age.earthAge).toEqual(undefined);
   });
 });
