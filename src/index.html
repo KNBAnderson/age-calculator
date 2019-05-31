@@ -8,10 +8,10 @@
     <h1>Find your age, around the galaxy</h1>
     <form id="age-form">
       <label for="birthDate">Enter your birthdy:</label><br>
-      <input type="date" name="birthDate" id="birthDate">
+      <input type="date" name="birthDate" id="birthDate" required>
       <hr>
       <label for="health">Do you always eat your broccolli?</label><br>
-      <input type="radio" name="health" value="1" checked> Yes<br>
+      <input type="radio" name="health" value="1" required> Yes<br>
       <input type="radio" name="health" value="0"> Sometimes<br>
       <input type="radio" name="health" value="-1"> What is that?
       <hr>
@@ -22,5 +22,9 @@
       <hr>
       <button type="submit" name="button" class="btn btn-warning">Find your age!</button>
     </form>
+
+    <div class="solution">
+
+    </div>
   </body>
 </html>
