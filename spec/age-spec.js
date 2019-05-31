@@ -31,7 +31,7 @@ describe('Age', function() {
 
   it('should determine user\'s life expectancy', function() {
 
-    expect(reusableAge.lifeExpectancy).toEqual(undefined);
+    expect(reusableAge.lifeExpectancy).toEqual(null);
   });
 
   it('should determine user\'s years left to live based on life expectancy', function() {

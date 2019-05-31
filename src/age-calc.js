@@ -11,16 +11,14 @@ export function Age(birthDate) {
 Age.prototype.getEarthAge = function () {
   let currentDate = new Date();
   let earthAge = currentDate - this.birthDate;
-  earthAge = Math.floor(earthAge/31536000000);
-  return earthAge
+  earthAge = earthAge/(1000 * 60 * 60 * 24 * 365);
+  this.exactAge = earthAge;
+  return Math.floor(earthAge);
 };
 
 Age.prototype.getMercuryAge = function () {
-  let currentDate = new Date();
-  let earthAge = currentDate - this.birthDate;
-  earthAge = earthAge/(1000 * 60 * 60 * 24 * 365);
-
-  return mercuryAge;
+  let mercuryAge = this.exactAge / 0.24;
+  return Math.floor(mercuryAge);
 };
 
 Age.prototype.getVenusAge = function () {
